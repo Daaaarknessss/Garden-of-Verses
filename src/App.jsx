@@ -604,8 +604,7 @@ function PoemReader({ poem, onClose }) {
     };
     timerRef.current=setTimeout(revealNext,700);
     return()=>clearTimeout(timerRef.current);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+  },[allWords.length]);
 
   useEffect(() => {
     if(containerRef.current) containerRef.current.scrollTo({top:containerRef.current.scrollHeight,behavior:"smooth"});
